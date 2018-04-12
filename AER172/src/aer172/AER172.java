@@ -37,26 +37,22 @@ public class AER172 {
              * Insertamos un bucle con las veces que le vamos a introducir todos
              * los datos.
              */
-             boolean I= false;
-             boolean D= false; //lo inicializamos en false por que al principio no hay nadie en las sillas (hay un punto)
-            for (int a = 0; numero < a; a++) {
-                String personas = sc.nextLine();//pedimos el numero de personas
-                for (int b=0;b< personas.length();b++){
-                   if (personas.charAt(b)=='I'){// utilizamos el charAt para la posicion en la que coge el pan; si lo coge por la izquierda es true
-                       I=true;
-                   }
-                   else if (personas.charAt(b)=='D'){
-                       D=true;
-                   }
-                   
+            boolean I = false;
+            boolean D = false; //lo inicializamos en false por que al principio no hay nadie en las sillas (hay un punto)
+            String personas = sc.nextLine();//pedimos el numero de personas
+            for (int b = 0; b < personas.length(); b++) {
+                if (personas.charAt(b) == 'I') {// utilizamos el charAt para la posicion en la que coge el pan; si lo coge por la izquierda es true
+                    I = true;
+                } else if (personas.charAt(b) == 'D') {
+                    D = true;
                 }
             }
-            if (I&&D){
-                System.out.println("Alguno no come");
+            if (I && D) {
+                System.out.println("ALGUNO NO COME");
+            } else {
+                System.out.println("TODOS COMEN");
             }
-            else {
-                System.out.println("Todos comen");
-            }
+            numero = sc.nextInt();
         }
     }
 
